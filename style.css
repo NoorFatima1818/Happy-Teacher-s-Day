@@ -1,0 +1,68 @@
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+  }
+  
+  .neon-text {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff,
+      0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    margin: 10px;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff,
+        0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff,
+        0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .neon-text {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .neon-text {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* CSS for input and button */
+  input[type="text"], button {
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #333; /* Dark background for better contrast */
+    color: #fff; /* White text */
+    text-shadow: none; /* Remove text shadow for better readability */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  }
+  
+  button {
+    cursor: pointer; /* Changes cursor to pointer when hovering over button */
+  }
+  
+  input[type="text"]:focus, button:hover {
+    outline: none; /* Removes default focus outline */
+    box-shadow: 0 0 10px #fff, /* White glow */
+                0 0 20px #ff00ff, /* Neon pink outer glow to match text */
+                inset -5px -5px #bf00b5; /* Inner shadow for depth, darker pink */
+  }
+  
+  
